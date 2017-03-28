@@ -1,5 +1,23 @@
-<h1>Instagram</h1>
-<% @posts.each do |post| %>
-	<%=link_to (image_tag post.image.url(:medium)), post_path(post)%>
+<div class="row">
+  <div class="col-md-4">
+  </div>
+  <div class="col-md-4">
+  	<% @posts.each do |post| %>
+	<img id="myImg" src="<%=post.image%>" alt="<%=post.caption%>" class='img-responsive'>
 	<%=post.caption%>
 	<% end %>
+  </div>
+  <div class="col-md-4"></div>
+</div>
+
+<div id="myModal" class="modal">
+
+  <!-- The Close Button -->
+  <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+
+  <!-- Modal Content (The Image) -->
+  <img class="modal-content" id="img01">
+
+  <!-- Modal Caption (Image Text) -->
+  <div id="caption"></div>
+</div> 
