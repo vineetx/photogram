@@ -20,6 +20,14 @@
   <nav class="navbar">
   <h1 id="title">Instagram</h1>
 	</nav>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+  <div id="mySidenav" class="sidenav">
+  <a href="<%= posts_path %>" id="home">Home</a>
+  <a href="<%= new_post_path %>" id="new">New</a>
+  <a href="#" id="about">About</a>
+  <a href="#" id="contact">Contact</a>
+</div>
     <%= yield %>
   </body>
 </html>
